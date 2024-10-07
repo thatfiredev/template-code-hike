@@ -1,5 +1,5 @@
 const user = {
-	name: 'Lorem',
+	name: 'Lorem Ipsum',
 	age: 26,
 };
 

@@ -5,8 +5,27 @@
   channel = "stable-23.11"; # or "unstable"
 
   # Use https://search.nixos.org/packages to find packages
-  packages = [
+packages = [
     pkgs.nodejs_20
+    pkgs.nspr
+    pkgs.glib
+    pkgs.glibc
+    pkgs.nss
+    pkgs.jellyfin-ffmpeg
+    pkgs.dbus
+    pkgs.atk
+    pkgs.expat
+    pkgs.xorg.libX11
+    pkgs.xorg.libXcomposite
+    pkgs.xorg.libXdamage
+    pkgs.xorg.libXfixes
+    pkgs.xorg.libXext
+    pkgs.xorg.libXrandr
+    pkgs.xorg.libxcb
+    pkgs.mesa
+    pkgs.libdrm
+    pkgs.libxkbcommon
+    pkgs.alsa-lib
   ];
 
   # Sets environment variables in the workspace
@@ -25,6 +44,7 @@
           # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
           # and show it in IDX's web preview panel
           command = ["npm" "start" "--port" "$PORT" "--host" "0.0.0.0"];
+          # command = ["python3" "-m" "http.server" "$PORT" "--bind" "0.0.0.0" "--directory" "build"];
           manager = "web";
           env = {
             # Environment variables to set for your server

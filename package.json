@@ -7,20 +7,20 @@
   "type": "module",
   "dependencies": {
     "@code-hike/lighter": "0.9.4",
-    "@remotion/cli": "^4.0.0",
-    "@remotion/google-fonts": "^4.0.0",
-    "@remotion/studio": "^4.0.0",
-    "@remotion/layout-utils": "^4.0.0",
+    "@remotion/cli": "4.0.215",
+    "@remotion/google-fonts": "4.0.215",
+    "@remotion/layout-utils": "4.0.215",
+    "@remotion/studio": "4.0.215",
     "codehike": "1.0.0-beta.2",
+    "polished": "4.3.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remotion": "^4.0.0",
+    "remotion": "4.0.215",
     "twoslash-cdn": "0.2.9",
-    "polished": "4.3.1",
     "zod": "3.22.3"
   },
   "devDependencies": {
-    "@remotion/eslint-config": "^4.0.0",
+    "@remotion/eslint-config": "4.0.215",
     "@types/react": "18.3.1",
     "@types/web": "0.0.166",
     "eslint": "8.56.0",
@@ -28,7 +28,8 @@
     "typescript": "5.6.2"
   },
   "scripts": {
-    "start": "remotion studio",
+    "start": "remotion studio --webpack-poll=1000 --log=verbose",
+    "dev": "nodemon --watch 'public' --exec 'npm run start'",
     "build": "remotion render Main out/video.mp4",
     "upgrade": "remotion upgrade",
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"

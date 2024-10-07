@@ -1,7 +1,7 @@
 const user = {
-	name: 'Lorem',
+	name: 'Hello',
 	age: 26,
-	location: 'Ipsum',
+	location: 'Cool! I like it',
 };
 
 console.log(user.location);
